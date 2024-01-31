@@ -2,3 +2,7 @@ resources/config.ini
 .DS_Store
 .idea/
 .Rproj.user
+**/docs/libs/**
+**/_bookdown_files/**
+*.log
+*.tex
