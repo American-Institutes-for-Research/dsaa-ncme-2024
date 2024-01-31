@@ -8,11 +8,18 @@ Questions for live interaction are included as callouts.
 
 ## Prerequisites
 
+All software used in this tutorial is available for free.
+
 ### Software
 
 * [R](https://cran.rstudio.com/) (3.3.0+)
 * [RStudio IDE](https://posit.co/download/rstudio-desktop/) 9
-* TeX installed in RStudio
+* [TeX installed in RStudio](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html)
+
+To publish online:
+
+* GitHub
+  * [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) is an easy introduction to git without requiring command line
 
 ### Knowledge and experience
 
@@ -20,7 +27,7 @@ We assume no experience with YAML or LaTeX. Experience with GitHub, R, and R Mar
 
 ## Motivation
 
-Why is bookdown useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:
+Why is `bookdown` useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:
 
 [image of process data project prior to new documentation]
 
@@ -28,9 +35,9 @@ Into this:
 
 [image of new bookdown, GIF for emphasis on interactivity]
 
-You can imagine bookdown as a format designed to combine the features of data tables, 
+You can imagine `bookdown` as a format designed to combine the features of data tables, textual explanations, and code.
 
-The following table summarizes some features of R Markdown and bookdown as compared to familiar alternatives.
+The following table summarizes some features of R Markdown and `bookdown` as compared to familiar alternatives.
 
 | Features                             | Microsoft Word/Google Docs                                   | R Markdown                 | bookdown                   |
 | ------------------------------------ | ------------------------------------------------------------ | -------------------------- | -------------------------- |
@@ -53,7 +60,7 @@ Go to *File > New Project > New Directory > Book project using bookdown*
 
 ![Click on Book project using bookdown](resources\bookdown-project.png)
 
-We see that we've been given an example book with all the requisite files. If you want you can edit the `.Rmd` files directly and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.
+We now have an example book with all the requisite files. If you want you can simply edit the `.Rmd` files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.
 
 ## Navigating bookdown
 
@@ -65,7 +72,7 @@ Here we take an overview of the main filetypes involved in bookdown and what the
 
 bookdown is an extension of the R Markdown format, which is itself an extension of the Markdown markup language. 
 
-But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode:
+But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode, which is similar to a Google Docs or Microsoft Word interface:
 
 ![R Markdown in visual mode](resources\visual-mode.png)
 
@@ -73,7 +80,7 @@ And source mode:
 
 ![R Markdown in source mode](resources\source-mode.png)
 
-See Resources for links to learning R Markdown.
+See [Resources](#resources) for links to learning R Markdown.
 
 ### `.yml`
 
@@ -94,18 +101,50 @@ You can source other files here, such as custom CSS files:
 ```yaml
 ---
 bookdown::gitbook:
-  css: mystyle.css
+  css: style.css
 ---
 ```
 
 ### `.css`
 
-controls appearance in the gitbook (HTML/online book).
+Cascading Style Sheets (CSS) are used across the web to control aesthetics. 
 
-This piece is optional, especially for branded materials that may need to align with. I also needed this file format to handle wide tables. Let's see an example
+This piece is optional, especially for branded materials that may need to align with organizational guidelines. 
+
+It can also be used to customize your output to handle specific cases. For example, I wanted. Let's see an example of how I dealt with this:
+
+
+
+Another example is increasing the visible page width for wide content such as tables:
 
 ```css
+/*Expand table width if needed*/
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  overflow: visible !important;
+}
+.page-inner, .bookbody {
+  max-width: 90% !important;
+}
+.page-inner p, .page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4, .page-inner h5, .page-inner h6, .page-inner li, .page-inner .sourceCode, .page-inner table, .ref, .page-inner .figure, .page-inner .csl-entry {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#codebook table, .wide table {
+  max-width: 98% !important;
+}
 ```
+
+[insert how I referenced these in the book]
+
+## Interactive content
+
+The `bookdown` format is compatible with many JavaScript-based packages such as `shiny` and `plotly`. This means that we can create books where users can interact with graphs, dashboards, and more!
+
+In this section we focus on `reactable`, a package that allows users to interactively sort and filter tables, similarly to an Excel workbook. 
+
+[describe reactable and kable]
 
 ## Integrating regular data updates
 
@@ -121,9 +160,11 @@ Which renders as:
 
 [insert image of rendered result]
 
-## Knitting to HTML
 
-`bookdown` can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on outputting to gitbook (HTML) so that we can host our documentation book on the open web. Notice that we have the benefit of multiple output formats, a good accessibility support.
+
+## Publishing as a website
+
+`bookdown` can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on outputting to gitbook (`HTML`) so that we can host our documentation book on the open web. Notice that we have the benefit of multiple output formats, a good accessibility support.
 
 ![Build to gitbook from Build pane](resources\build.png)
 
@@ -131,21 +172,29 @@ In the RStudio IDE Build pane, click on *Build Book > bookdown::gitbook*. Or, ru
 
 ### Hosting on GitHub
 
+In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website. 
+
+Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.
+
+![Deploy GitHub Pages from the docs folder](resources\github-pages.png)
+
+The default name for a bookdown project directory is `/book`, but we see that GitHub only deploys `.html` files from inside directories named `/docs`. So we will rename our directory to `/docs`.
+
+![Renaming books to docs](resources\rename.png)
+
 [describe how to setup GitHub Pages]
 
-## Interactivity
+Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to `your-username.github.io/repository-name`. 
 
-[describe reactable and kable]
+Clicking on that link shows you your new website:
+
+![HTML rendered website welcome page](resources\website.png)
 
 ## Crowd-sourced edits
 
 Hosting on GitHub gives us more than just a domain to click on. It gives us the ability to solicit feedback in real time from users. 
 
 [insert where you could direct users to give feedback on GitHub - what happens if they don't have an account?]
-
- ## Appearance
-
-
 
 ## Resources
 
