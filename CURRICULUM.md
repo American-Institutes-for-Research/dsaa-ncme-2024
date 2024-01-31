@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial shows you how to use `bookdown` to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository.
+This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository.
 
 Questions for live interaction are included as callouts.
 
@@ -20,9 +20,7 @@ We assume no experience with YAML or LaTeX. Experience with GitHub, R, and R Mar
 
 ## Motivation
 
-bookdown is an extension of the R Markdown format, which is itself an extension of the Markdown language. 
-
-Why is it useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:
+Why is bookdown useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:
 
 [image of process data project prior to new documentation]
 
@@ -30,13 +28,30 @@ Into this:
 
 [image of new bookdown, GIF for emphasis on interactivity]
 
+You can imagine bookdown as a format designed to combine the features of data tables, 
+
+The following table summarizes some features of R Markdown and bookdown as compared to familiar alternatives.
+
+| Features                             | Microsoft Word/Google Docs                                   | R Markdown                 | bookdown                   |
+| ------------------------------------ | ------------------------------------------------------------ | -------------------------- | -------------------------- |
+| Multiple editors                     | Yes                                                          | Yes, via GitHub            | Yes, via GitHub            |
+| Formats and runs code snippets       | No                                                           | Yes, R code                | Yes, R code                |
+| Formats math                         | Yes                                                          | Yes, with LaTeX            | Yes, with LaTeX            |
+| Consistent appearance and formatting | Haha                                                         | Yes                        | Yes                        |
+| PDF accessibility                    | Yes, via tagged PDF export                                   | No, requires customization | No, requires customization |
+| Web accessibility                    | Yes, [with some exceptions](https://www.colorado.edu/digital-accessibility/google-docs-and-accessibility) | Yes, via HTML output       | Yes, via HTML output       |
+
+As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool  for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.
+
 ## Getting started
 
 Open RStudio Desktop.
 
-Go to *File > New Project > New Directory > Book project using bookdown*.
+Go to *File > New Project > New Directory > Book project using bookdown*
 
-![File menu in RStudio to create a new project](C:\Users\kyi\OneDrive - American Institutes for Research in the Behavioral Sciences\Documents\GitHub\dsaa-ncme-2024\resources\file-new-project)
+![File menu in RStudio to create a new project](resources\file-new-project.png)
+
+![Click on Book project using bookdown](resources\bookdown-project.png)
 
 We see that we've been given an example book with all the requisite files. If you want you can edit the `.Rmd` files directly and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.
 
@@ -48,15 +63,40 @@ Here we take an overview of the main filetypes involved in bookdown and what the
 
 ### `.Rmd`
 
- book content
+bookdown is an extension of the R Markdown format, which is itself an extension of the Markdown markup language. 
+
+But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode:
+
+![R Markdown in visual mode](resources\visual-mode.png)
+
+And source mode:
+
+![R Markdown in source mode](resources\source-mode.png)
+
+See Resources for links to learning R Markdown.
 
 ### `.yml`
 
-Controls meta-structure for the gitbook, as well as PDF appearances, via Pandoc and YAML. (If you have a background in web design, think of YAML like CSS for LaTeX, and of LaTeX as HTML for PDFs.)
+These files control meta-structure for the book, as well as PDF appearances, via Pandoc and YAML. (If you have a background in web design, think of YAML like CSS for LaTeX, and of LaTeX as HTML for PDFs.)
 
-`_output.yml` is sourced as an `output:` YAML tag
+`_bookdown.yml` controls high-level settings for the book. Let's change where the book outputs to:
 
-1. has all options for the book structure, including download formats, sharing buttons, splitting pages by section, where output is located, and [appearance](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style)
+```yaml
+output_dir: "./MY_DIRECTORY"
+```
+
+Sometimes we have a lot of YAML code for one specific section, so we separate this out into another file. For example, `_output.yml` is sourced from `_bookdown.yml` as an `output:` YAML tag
+
+The `output:` tag controls detailed options for the book structure, including download formats, sharing buttons, splitting pages by section, where output is located, and [appearance](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style).
+
+You can source other files here, such as custom CSS files:
+
+```yaml
+---
+bookdown::gitbook:
+  css: mystyle.css
+---
+```
 
 ### `.css`
 
@@ -67,31 +107,53 @@ This piece is optional, especially for branded materials that may need to align 
 ```css
 ```
 
+## Integrating regular data updates
 
+Each update to the underlying data may require us to update text in dozens or hundreds of places regarding sample size, missing values, and more. Integrating code directly into the text allows us to save time and prevent typos by calculating summary statistics from the data itself. 
 
-## Output formats
+It is likely we are not allowed to store data in the same place as the documentation, but uploading a summary `.csv` or `.xlsx` data file into our working directory allows us to accomplish the same task.
 
-bookdown can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on.
+For example, we write the below as inline R code:
 
-### Publishing to the web
+[insert code snippet of inline R]
+
+Which renders as:
+
+[insert image of rendered result]
+
+## Knitting to HTML
+
+`bookdown` can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on outputting to gitbook (HTML) so that we can host our documentation book on the open web. Notice that we have the benefit of multiple output formats, a good accessibility support.
+
+![Build to gitbook from Build pane](resources\build.png)
+
+In the RStudio IDE Build pane, click on *Build Book > bookdown::gitbook*. Or, run `bookdown::render_book()` in the R console.
 
 ### Hosting on GitHub
 
-
+[describe how to setup GitHub Pages]
 
 ## Interactivity
 
+[describe reactable and kable]
+
 ## Crowd-sourced edits
+
+Hosting on GitHub gives us more than just a domain to click on. It gives us the ability to solicit feedback in real time from users. 
+
+[insert where you could direct users to give feedback on GitHub - what happens if they don't have an account?]
 
  ## Appearance
 
 
 
-## Appendix
+## Resources
 
 * [Bookdown gallery](https://bookdown.org/home/archive/)
-  * I like browsing others' books for features I like and then 
 * [Bookdown reference](https://bookdown.org/yihui/bookdown/)
+* [R Markdown reference](https://bookdown.org/yihui/rmarkdown-cookbook/)
+
+Author's note: [Quarto](https://quarto.org/) is becoming more popular, and so far appears to be similar to the bookdown/R Markdown workflow with the added benefit of supporting Python and Julia. Users familiar with Jupyter notebooks may find Quarto books more suited to their needs.
 
 ## Troubleshooting
 
@@ -99,15 +161,4 @@ bookdown can publish to PDF and EPUB (e-book, such as Kindle), but we are going 
 
 iOS, Windows, Linux
 
-
-
-. 
-
-This will create a new directory with an example book as template. You can build the HTML version of this example book without doing any modification:
-
-- Go into the Build Pane in the RStudio IDE
-- Click on *Build Book > bookdown::gitbook*
-
-You can also run `bookdown::render_book()` in the R console.
-
-Learn more about using bookdown in the [Getting started section](https://pkgs.rstudio.com/bookdown/articles/bookdown.html).
+[Grant add stuff about common/anticipated issues during live demonstration]

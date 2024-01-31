@@ -1,0 +1,6 @@
+book_filename: "2017_Grade4_Mathematics_Process_Data_Documentation"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+output_dir: "."

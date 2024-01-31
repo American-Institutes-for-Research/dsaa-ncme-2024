@@ -1,0 +1,28 @@
+bookdown::gitbook:
+  split_by: section
+  css: mystyle.css
+  highlight: monochrome
+  config:
+    toc:
+      before: |
+        <li><a href="./">NAEP Process Data Release</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit:
+        link: https://github.com/American-Institutes-for-Research/dsaa-pdc-proc_data_release/edit/main/docs/%s
+        text: "Edit"
+    download: ["pdf"]
+    sharing:
+      github: yes
+      facebook: no
+      twitter: no
+bookdown::pdf_book:
+  pandoc_args: --listings
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  highlight: monochrome
+bookdown::epub_book: default
+bookdown::bs4_book: default

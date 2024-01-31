@@ -1,0 +1,58 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+.caption {
+  font-size: 14px;
+}
+
+/*Tables with sticky headers*/
+th {
+  text-align: left;
+}
+table,.Reactable .rt-table {
+  font-size: 14px;
+  margin-top: 4em !important;
+  margin-bottom: 3em !important;
+  position: relative;
+  overflow: initial !important;
+}
+tr.header,.rt-thead,.rt-th,.rt-tr-header {
+  position: sticky;
+  top: -1px;
+}
+.book-header a, caption, .caption, button {
+  color: black !important;
+}
+a:active, a:hover, a:focus,
+button:active, button:hover, button:focus,
+li a:active, li a:hover, li a:focus, .active a, .page-inner a {
+  color: #3366cc !important;
+}
+
+/*Expand table width if needed*/
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  overflow: visible !important;
+}
+.page-inner, .bookbody {
+  max-width: 90% !important;
+}
+.page-inner p, .page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4, .page-inner h5, .page-inner h6, .page-inner li, .page-inner .sourceCode, .page-inner table, .ref, .page-inner .figure, .page-inner .csl-entry {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#codebook table, .wide table {
+  max-width: 98% !important;
+}
