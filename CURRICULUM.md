@@ -6,6 +6,8 @@ This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to
 
 Questions for live interaction are included as callouts.
 
+To do: focus more on what than how
+
 ## Prerequisites
 
 All software used in this tutorial is available for free.
@@ -50,19 +52,23 @@ The following table summarizes some features of R Markdown and `bookdown` as com
 
 As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool  for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.
 
+Add: when should you NOT use it?
+
 ## Getting started
 
 Open RStudio Desktop.
 
 Go to *File > New Project > New Directory > Book project using bookdown*
 
-![File menu in RStudio to create a new project](resources\file-new-project.png)
+![File menu in RStudio to create a new project](resources/file-new-project.png)
 
-![Click on Book project using bookdown](resources\bookdown-project.png)
+![Click on Book project using bookdown](resources/bookdown-project.png)
 
 We now have an example book with all the requisite files. If you want you can simply edit the `.Rmd` files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.
 
 ## Navigating bookdown
+
+(Skip this section if pressed for time or move to appendix)
 
 Here we take an overview of the main filetypes involved in bookdown and what they are used for.
 
@@ -74,11 +80,11 @@ bookdown is an extension of the R Markdown format, which is itself an extension 
 
 But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode, which is similar to a Google Docs or Microsoft Word interface:
 
-![R Markdown in visual mode](resources\visual-mode.png)
+![R Markdown in visual mode](resources/visual-mode.png)
 
 And source mode:
 
-![R Markdown in source mode](resources\source-mode.png)
+![R Markdown in source mode](resources/source-mode.png)
 
 See [Resources](#resources) for links to learning R Markdown.
 
@@ -160,27 +166,29 @@ Which renders as:
 
 [insert image of rendered result]
 
-
-
 ## Publishing as a website
+
+Add: if you don't want to deal with GitHub, you can output as PDF with the drawback of not being interactive.
 
 `bookdown` can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on outputting to gitbook (`HTML`) so that we can host our documentation book on the open web. Notice that we have the benefit of multiple output formats, a good accessibility support.
 
-![Build to gitbook from Build pane](resources\build.png)
+![Build to gitbook from Build pane](resources/build.png)
 
 In the RStudio IDE Build pane, click on *Build Book > bookdown::gitbook*. Or, run `bookdown::render_book()` in the R console.
 
 ### Hosting on GitHub
 
+Add: what is GitHub? brief overview, add link.
+
 In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website. 
 
 Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.
 
-![Deploy GitHub Pages from the docs folder](resources\github-pages.png)
+![Deploy GitHub Pages from the docs folder](resources/github-pages.png)
 
 The default name for a bookdown project directory is `/book`, but we see that GitHub only deploys `.html` files from inside directories named `/docs`. So we will rename our directory to `/docs`.
 
-![Renaming books to docs](resources\rename.png)
+![Renaming books to docs](resources/rename.png)
 
 [describe how to setup GitHub Pages]
 
@@ -188,7 +196,7 @@ Wait up to 5 minutes for GitHub to publish your website. When you return to the 
 
 Clicking on that link shows you your new website:
 
-![HTML rendered website welcome page](resources\website.png)
+![HTML rendered website welcome page](resources/website.png)
 
 ## Crowd-sourced edits
 
