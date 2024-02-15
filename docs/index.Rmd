@@ -1,60 +1,49 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
-date: "`r Sys.Date()`"
+title: "bookdown for data scientists"
+#author: "Ruhan Circi, Juanita Hicks, Grant Adams, Karen Yi"
+#date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+split_by: section
 documentclass: book
+classoption: openany
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
+geometry: margin=3cm
+df_print: kable
+mainfont: Calibri Light
+monofont: Consolas
+urlcolor: blue
+fontsize: 12pt
+lang: "en"
+description: "This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository."
 ---
 
-# About
+# bookdown for data scientists
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository.
 
-## Usage 
+Questions for live interaction are included as callouts.
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+To do: focus more on what than how
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+## Prerequisites
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+All software used in this tutorial is available for free.
 
-## Render book
+### Software
 
-You can render the HTML version of this example book without changing anything:
+* [R](https://cran.rstudio.com/) (3.3.0+)
+* [RStudio IDE](https://posit.co/download/rstudio-desktop/) 9
+* [TeX installed in RStudio](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html)
 
-1. Find the **Build** pane in the RStudio IDE, and
+To publish online:
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+* GitHub
+  * [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) is an easy introduction to git without requiring command line
 
-Or build the book from the R console:
+### Knowledge and experience
 
-```{r, eval=FALSE}
-bookdown::render_book()
-```
+We assume no experience with YAML or LaTeX. Experience with GitHub, R, and R Markdown are helpful, but not necessary.
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-```{r eval=FALSE}
-bookdown::serve_book()
-```
-
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
