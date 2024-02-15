@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.3 Preview book | A Minimal Book Example</title>
+  <title>Chapter 9 Appendix: Navigating bookdown | A Minimal Book Example</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.3 Preview book | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 9 Appendix: Navigating bookdown | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.3 Preview book | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 9 Appendix: Navigating bookdown | A Minimal Book Example" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="render-book.html"/>
-<link rel="next" href="bookdown-for-data-scientists.html"/>
+<link rel="prev" href="crowd-sourced-edits.html"/>
+<link rel="next" href="further-reading.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -183,20 +183,74 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="preview-book" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Preview book<a href="preview-book.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="preview-book.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
+<div id="appendix-navigating-bookdown" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Appendix: Navigating bookdown<a href="appendix-navigating-bookdown.html#appendix-navigating-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>(Skip this section if pressed for time or move to appendix)</p>
+<p>Here we take an overview of the main filetypes involved in bookdown and what they are used for.</p>
+<blockquote>
+<p>Who has worked with <code>.Rmd</code>, <code>.yml</code>, or <code>.css</code> before? What are these filetypes used for?</p>
+</blockquote>
+<div id="rmd" class="section level3 hasAnchor" number="9.0.1">
+<h3><span class="header-section-number">9.0.1</span> <code>.Rmd</code><a href="appendix-navigating-bookdown.html#rmd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>bookdown is an extension of the R Markdown format, which is itself an extension of the Markdown markup language.</p>
+<p>But you don’t need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode, which is similar to a Google Docs or Microsoft Word interface:</p>
+<div class="float">
+<img src="resources/visual-mode.png" alt="R Markdown in visual mode" />
+<div class="figcaption">R Markdown in visual mode</div>
+</div>
+<p>And source mode:</p>
+<div class="float">
+<img src="resources/source-mode.png" alt="R Markdown in source mode" />
+<div class="figcaption">R Markdown in source mode</div>
+</div>
+<p>See <a href="#resources">Resources</a> for links to learning R Markdown.</p>
+</div>
+<div id="yml" class="section level3 hasAnchor" number="9.0.2">
+<h3><span class="header-section-number">9.0.2</span> <code>.yml</code><a href="appendix-navigating-bookdown.html#yml" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These files control meta-structure for the book, as well as PDF appearances, via Pandoc and YAML. (If you have a background in web design, think of YAML like CSS for LaTeX, and of LaTeX as HTML for PDFs.)</p>
+<p><code>_bookdown.yml</code> controls high-level settings for the book. Let’s change where the book outputs to:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="appendix-navigating-bookdown.html#cb3-1" tabindex="-1"></a><span class="fu">output_dir</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;./MY_DIRECTORY&quot;</span></span></code></pre></div>
+<p>Sometimes we have a lot of YAML code for one specific section, so we separate this out into another file. For example, <code>_output.yml</code> is sourced from <code>_bookdown.yml</code> as an <code>output:</code> YAML tag</p>
+<p>The <code>output:</code> tag controls detailed options for the book structure, including download formats, sharing buttons, splitting pages by section, where output is located, and <a href="https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style">appearance</a>.</p>
+<p>You can source other files here, such as custom CSS files:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="appendix-navigating-bookdown.html#cb4-1" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb4-2"><a href="appendix-navigating-bookdown.html#cb4-2" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="appendix-navigating-bookdown.html#cb4-3" tabindex="-1"></a><span class="at">  </span><span class="fu">css</span><span class="kw">:</span><span class="at"> style.css</span></span>
+<span id="cb4-4"><a href="appendix-navigating-bookdown.html#cb4-4" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+</div>
+<div id="css" class="section level3 hasAnchor" number="9.0.3">
+<h3><span class="header-section-number">9.0.3</span> <code>.css</code><a href="appendix-navigating-bookdown.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cascading Style Sheets (CSS) are used across the web to control aesthetics.</p>
+<p>This piece is optional, especially for branded materials that may need to align with organizational guidelines.</p>
+<p>It can also be used to customize your output to handle specific cases. For example, I wanted. Let’s see an example of how I dealt with this:</p>
+<p>Another example is increasing the visible page width for wide content such as tables:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="appendix-navigating-bookdown.html#cb5-1" tabindex="-1"></a><span class="co">/*Expand table width if needed*/</span></span>
+<span id="cb5-2"><a href="appendix-navigating-bookdown.html#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="appendix-navigating-bookdown.html#cb5-3" tabindex="-1"></a><span class="fu">.book</span> <span class="fu">.book-body</span> <span class="fu">.page-wrapper</span> <span class="fu">.page-inner</span> section<span class="fu">.normal</span> {</span>
+<span id="cb5-4"><a href="appendix-navigating-bookdown.html#cb5-4" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">visible</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="appendix-navigating-bookdown.html#cb5-5" tabindex="-1"></a>}</span>
+<span id="cb5-6"><a href="appendix-navigating-bookdown.html#cb5-6" tabindex="-1"></a><span class="fu">.page-inner</span><span class="op">,</span> <span class="fu">.bookbody</span> {</span>
+<span id="cb5-7"><a href="appendix-navigating-bookdown.html#cb5-7" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">90</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb5-8"><a href="appendix-navigating-bookdown.html#cb5-8" tabindex="-1"></a>}</span>
+<span id="cb5-9"><a href="appendix-navigating-bookdown.html#cb5-9" tabindex="-1"></a><span class="fu">.page-inner</span> p<span class="op">,</span> <span class="fu">.page-inner</span> h1<span class="op">,</span> <span class="fu">.page-inner</span> h2<span class="op">,</span> <span class="fu">.page-inner</span> h3<span class="op">,</span> <span class="fu">.page-inner</span> h4<span class="op">,</span> <span class="fu">.page-inner</span> h5<span class="op">,</span> <span class="fu">.page-inner</span> h6<span class="op">,</span> <span class="fu">.page-inner</span> li<span class="op">,</span> <span class="fu">.page-inner</span> <span class="fu">.sourceCode</span><span class="op">,</span> <span class="fu">.page-inner</span> table<span class="op">,</span> <span class="fu">.ref</span><span class="op">,</span> <span class="fu">.page-inner</span> <span class="fu">.figure</span><span class="op">,</span> <span class="fu">.page-inner</span> <span class="fu">.csl-entry</span> {</span>
+<span id="cb5-10"><a href="appendix-navigating-bookdown.html#cb5-10" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">800</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="appendix-navigating-bookdown.html#cb5-11" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb5-12"><a href="appendix-navigating-bookdown.html#cb5-12" tabindex="-1"></a>  <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb5-13"><a href="appendix-navigating-bookdown.html#cb5-13" tabindex="-1"></a>}</span>
+<span id="cb5-14"><a href="appendix-navigating-bookdown.html#cb5-14" tabindex="-1"></a><span class="pp">#codebook</span> table<span class="op">,</span> <span class="fu">.wide</span> table {</span>
+<span id="cb5-15"><a href="appendix-navigating-bookdown.html#cb5-15" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">98</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb5-16"><a href="appendix-navigating-bookdown.html#cb5-16" tabindex="-1"></a>}</span></code></pre></div>
+<p>[insert how I referenced these in the book]</p>
 
 </div>
-<!-- </div> -->
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="render-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bookdown-for-data-scientists.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="crowd-sourced-edits.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="further-reading.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -227,7 +281,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/index.Rmd",
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/08-appendix.Rmd",
 "text": "Edit"
 },
 "history": {
