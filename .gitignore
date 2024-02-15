@@ -1,8 +1,12 @@
 resources/config.ini
 .DS_Store
-.idea/
 .Rproj.user
-**/docs/libs/**
-**/_bookdown_files/**
-*.log
-*.tex
+
+# Data files
+*.RData
+
+docs/.Rhistory
+*.docx
+docs/2023-naep-release-docs.Rmd
+docs/.Rhistory
+docs/.Rhistory
