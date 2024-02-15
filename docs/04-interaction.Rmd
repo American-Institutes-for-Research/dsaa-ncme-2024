@@ -1,0 +1,8 @@
+# Adding interaction
+
+The `bookdown` format is compatible with many JavaScript-based packages such as `shiny` and `plotly`. This means that we can create books where users can interact with graphs, dashboards, and more!
+
+In this section we focus on `reactable`, a package that allows users to interactively sort and filter tables, similarly to an Excel workbook. 
+
+[describe reactable and kable]
+

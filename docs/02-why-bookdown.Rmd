@@ -1,0 +1,26 @@
+# Motivation
+
+Why is `bookdown` useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:
+
+[image of process data project prior to new documentation]
+
+Into this:
+
+[image of new bookdown, GIF for emphasis on interactivity]
+
+You can imagine `bookdown` as a format designed to combine the features of data tables, textual explanations, and code.
+
+The following table summarizes some features of R Markdown and `bookdown` as compared to familiar alternatives.
+
+| Features                             | Microsoft Word/Google Docs                                   | R Markdown                 | bookdown                   |
+| ------------------------------------ | ------------------------------------------------------------ | -------------------------- | -------------------------- |
+| Multiple editors                     | Yes                                                          | Yes, via GitHub            | Yes, via GitHub            |
+| Formats and runs code snippets       | No                                                           | Yes, R code                | Yes, R code                |
+| Formats math                         | Yes                                                          | Yes, with LaTeX            | Yes, with LaTeX            |
+| Consistent appearance and formatting | Haha                                                         | Yes                        | Yes                        |
+| PDF accessibility                    | Yes, via tagged PDF export                                   | No, requires customization | No, requires customization |
+| Web accessibility                    | Yes, [with some exceptions](https://www.colorado.edu/digital-accessibility/google-docs-and-accessibility) | Yes, via HTML output       | Yes, via HTML output       |
+
+As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool  for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.
+
+## When not to use bookdown

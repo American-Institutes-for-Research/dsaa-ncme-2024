@@ -1,0 +1,13 @@
+# Integrating regular data updates
+
+Each update to the underlying data may require us to update text in dozens or hundreds of places regarding sample size, missing values, and more. Integrating code directly into the text allows us to save time and prevent typos by calculating summary statistics from the data itself. 
+
+It is likely we are not allowed to store data in the same place as the documentation, but uploading a summary `.csv` or `.xlsx` data file into our working directory allows us to accomplish the same task.
+
+For example, we write the below as inline R code:
+
+[insert code snippet of inline R]
+
+Which renders as:
+
+[insert image of rendered result]

@@ -1,0 +1,15 @@
+# Further reading
+
+* [Bookdown gallery](https://bookdown.org/home/archive/)
+* [Bookdown reference](https://bookdown.org/yihui/bookdown/)
+* [R Markdown reference](https://bookdown.org/yihui/rmarkdown-cookbook/)
+
+Author's note: [Quarto](https://quarto.org/) is becoming more popular, and so far appears to be similar to the bookdown/R Markdown workflow with the added benefit of supporting Python and Julia. Users familiar with Jupyter notebooks may find Quarto books more suited to their needs.
+
+## Troubleshooting
+
+### Operating system differences
+
+iOS, Windows, Linux
+
+[Grant add stuff about common/anticipated issues during live demonstration]
