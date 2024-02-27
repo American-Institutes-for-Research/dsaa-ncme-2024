@@ -2,6 +2,7 @@ bookdown::gitbook:
   split_by: section
   css: mystyle.css
   highlight: monochrome
+  fig_caption: false
   config:
     toc:
       before: |
@@ -16,7 +17,9 @@ bookdown::gitbook:
       github: yes
       facebook: no
       twitter: no
+
 bookdown::pdf_book:
+  fig_caption: false
   pandoc_args: --listings
   includes:
     in_header: preamble.tex

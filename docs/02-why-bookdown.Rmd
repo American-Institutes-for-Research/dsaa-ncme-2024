@@ -23,4 +23,4 @@ The following table summarizes some features of R Markdown and `bookdown` as com
 
 As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool  for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.
 
-## When not to use bookdown
+### When not to use bookdown

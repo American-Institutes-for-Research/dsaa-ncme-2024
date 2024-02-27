@@ -1,4 +1,4 @@
-# Appendix: Navigating bookdown
+# Appendix: bookdown filetypes
 
 (Skip this section if pressed for time or move to appendix)
 
@@ -6,7 +6,7 @@ Here we take an overview of the main filetypes involved in bookdown and what the
 
 > Who has worked with `.Rmd`, `.yml`, or `.css` before? What are these filetypes used for?
 
-### `.Rmd`
+### `.Rmd` {-}
 
 bookdown is an extension of the R Markdown format, which is itself an extension of the Markdown markup language. 
 
@@ -20,7 +20,7 @@ And source mode:
 
 See [Resources](#resources) for links to learning R Markdown.
 
-### `.yml`
+### `.yml` {-}
 
 These files control meta-structure for the book, as well as PDF appearances, via Pandoc and YAML. (If you have a background in web design, think of YAML like CSS for LaTeX, and of LaTeX as HTML for PDFs.)
 
@@ -43,7 +43,7 @@ bookdown::gitbook:
 ---
 ```
 
-### `.css`
+### `.css` {-}
 
 Cascading Style Sheets (CSS) are used across the web to control aesthetics. 
 
