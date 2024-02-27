@@ -8,3 +8,4 @@ resources/config.ini
 docs/.Rhistory
 *.docx
 docs/2023-naep-release-docs.Rmd
+book/.Rhistory
