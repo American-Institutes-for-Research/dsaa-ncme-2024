@@ -1,0 +1,31 @@
+# Adding interaction
+
+```{r, echo=F, warning=F}
+source('setup.R')
+
+t1 <- read_table('../resources/data/tables.xlsx',sheet="iep")
+codebook <- read_table('../resources/data/codebook.xlsx',sheet=1)
+```
+
+The `bookdown` format is compatible with many JavaScript-based packages such as `shiny` and `plotly`. This means that we can create books where users can interact with graphs, dashboards, and more!
+
+In this section we focus on `reactable`, a package that allows users to interactively sort and filter tables, similarly to an Excel workbook. 
+
+[describe reactable and kable]
+
+```{r}
+kable2(
+  t1, 
+  caption = "Students with disabilities",
+) %>%
+  column_width(c(1,4)) %>%
+  column_width(3, width = medium)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+reactable2(codebook,
+           columns=list(
+             Description=colDef(minWidth=120),
+             Values=colDef(minWidth=80)
+           ))
+```

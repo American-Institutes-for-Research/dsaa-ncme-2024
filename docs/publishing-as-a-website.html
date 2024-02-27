@@ -50,6 +50,15 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/core-js-2.5.3/shim.min.js"></script>
+<script src="libs/react-17.0.0/react.min.js"></script>
+<script src="libs/react-17.0.0/react-dom.min.js"></script>
+<script src="libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<link href="libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
 <style type="text/css">
@@ -100,7 +109,7 @@ code span.wa { font-style: italic; } /* Warning */
 </style>
 
 
-<link rel="stylesheet" href="mystyle.css" type="text/css" />
+<link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css" />
 </head>
 
 <body>
@@ -171,9 +180,15 @@ code span.wa { font-style: italic; } /* Warning */
             <section class="normal" id="section-">
 <div id="publishing-as-a-website" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Publishing as a website<a href="publishing-as-a-website.html#publishing-as-a-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Add: if you don’t want to deal with GitHub, you can output as PDF with the drawback of not being interactive.</p>
-<p><code>bookdown</code> can publish to PDF and EPUB (e-book, such as Kindle), but we are going to focus on outputting to gitbook (<code>HTML</code>) so that we can host our documentation book on the open web. Notice that we have the benefit of multiple output formats, a good accessibility support.</p>
-<p><img src="resources/build.png" alt="Build to gitbook from Build pane" /></p>
+<p><code>bookdown</code> can publish to PDF and EPUB (e-book, such as Kindle). Add: if you don’t want to deal with GitHub, you can output as PDF with the drawback of not being interactive.</p>
+<p>To host our documentation book on the open web, we can output to gitbook (<code>HTML</code>) so that we can. Notice that we have the benefit of multiple output formats, a good accessibility support.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="publishing-as-a-website.html#cb10-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/build.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="../resources/images/build.png" alt="Build to gitbook from Build pane" width="416" />
+<p class="caption">
+Figure 6.1: Build to gitbook from Build pane
+</p>
+</div>
 <p>In the RStudio IDE Build pane, click on <em>Build Book &gt; bookdown::gitbook</em>. Or, run <code>bookdown::render_book()</code> in the R console.</p>
 </div>
             </section>

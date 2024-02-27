@@ -50,6 +50,15 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/core-js-2.5.3/shim.min.js"></script>
+<script src="libs/react-17.0.0/react.min.js"></script>
+<script src="libs/react-17.0.0/react-dom.min.js"></script>
+<script src="libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<link href="libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
 <style type="text/css">
@@ -100,7 +109,7 @@ code span.wa { font-style: italic; } /* Warning */
 </style>
 
 
-<link rel="stylesheet" href="mystyle.css" type="text/css" />
+<link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css" />
 </head>
 
 <body>
@@ -174,13 +183,31 @@ code span.wa { font-style: italic; } /* Warning */
 <p>Add: what is GitHub? brief overview, add link.</p>
 <p>In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website.</p>
 <p>Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.</p>
-<p><img src="resources/github-pages.png" alt="Deploy GitHub Pages from the docs folder" /></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="hosting-on-github.html#cb11-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/github-pages.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="../resources/images/github-pages.png" alt="Deploy GitHub Pages from the docs folder" width="831" />
+<p class="caption">
+Figure 6.2: Deploy GitHub Pages from the docs folder
+</p>
+</div>
 <p>The default name for a bookdown project directory is <code>/book</code>, but we see that GitHub only deploys <code>.html</code> files from inside directories named <code>/docs</code>. So we will rename our directory to <code>/docs</code>.</p>
-<p><img src="resources/rename.png" alt="Renaming books to docs" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="hosting-on-github.html#cb12-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/rename.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="../resources/images/rename.png" alt="Renaming books to docs" width="242" />
+<p class="caption">
+Figure 6.3: Renaming books to docs
+</p>
+</div>
 <p>[describe how to setup GitHub Pages]</p>
 <p>Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to <code>your-username.github.io/repository-name</code>.</p>
 <p>Clicking on that link shows you your new website:</p>
-<p><img src="resources/website.png" alt="HTML rendered website welcome page" /></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="hosting-on-github.html#cb13-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/website.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="../resources/images/website.png" alt="HTML rendered website welcome page" width="764" />
+<p class="caption">
+Figure 6.4: HTML rendered website welcome page
+</p>
+</div>
 
 </div>
 <!-- </div> -->

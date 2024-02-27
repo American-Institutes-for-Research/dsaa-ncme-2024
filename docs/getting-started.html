@@ -50,6 +50,15 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/core-js-2.5.3/shim.min.js"></script>
+<script src="libs/react-17.0.0/react.min.js"></script>
+<script src="libs/react-17.0.0/react-dom.min.js"></script>
+<script src="libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<link href="libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
 <style type="text/css">
@@ -100,7 +109,7 @@ code span.wa { font-style: italic; } /* Warning */
 </style>
 
 
-<link rel="stylesheet" href="mystyle.css" type="text/css" />
+<link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css" />
 </head>
 
 <body>
@@ -173,12 +182,20 @@ code span.wa { font-style: italic; } /* Warning */
 <h1><span class="header-section-number">Chapter 3</span> Getting started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Open RStudio Desktop.</p>
 <p>Go to <em>File &gt; New Project &gt; New Directory &gt; Book project using bookdown</em></p>
-<center>
-<img src="resources/file-new-project.png" alt="File menu in RStudio to create a new project" />
-</center>
-<center>
-<img src="resources/bookdown-project.png" alt="Click on Book project using bookdown" />
-</center>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="getting-started.html#cb1-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/file-new-project.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="../resources/images/file-new-project.png" alt="File menu in RStudio to create a new project" width="151" />
+<p class="caption">
+Figure 3.1: File menu in RStudio to create a new project
+</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started.html#cb2-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/bookdown-project.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="../resources/images/bookdown-project.png" alt="Click on Book project using bookdown" width="267" />
+<p class="caption">
+Figure 3.2: Click on Book project using bookdown
+</p>
+</div>
 <p>We now have an example book with all the requisite files. If you want you can simply edit the <code>.Rmd</code> files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.</p>
 
 </div>

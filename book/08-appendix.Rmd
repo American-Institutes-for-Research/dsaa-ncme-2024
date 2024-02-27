@@ -12,11 +12,15 @@ bookdown is an extension of the R Markdown format, which is itself an extension 
 
 But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode, which is similar to a Google Docs or Microsoft Word interface:
 
-![R Markdown in visual mode](resources/visual-mode.png)
+```{r,fig.cap="R Markdown in visual mode"}
+knitr::include_graphics('../resources/images/visual-mode.png')
+```
 
 And source mode:
 
-![R Markdown in source mode](resources/source-mode.png)
+```{r,fig.cap="R Markdown in source mode"}
+knitr::include_graphics('../resources/images/source-mode.png')
+```
 
 See [Resources](#resources) for links to learning R Markdown.
 

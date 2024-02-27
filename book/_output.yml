@@ -1,6 +1,6 @@
 bookdown::gitbook:
   split_by: section
-  css: mystyle.css
+  css: ../resources/styles/mystyle.css
   highlight: monochrome
   fig_caption: false
   config:
@@ -17,6 +17,8 @@ bookdown::gitbook:
       github: yes
       facebook: no
       twitter: no
+      weibo: no
+      instapaper: no
 
 bookdown::pdf_book:
   fig_caption: false
