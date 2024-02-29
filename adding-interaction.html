@@ -180,6 +180,8 @@ code span.wa { font-style: italic; } /* Warning */
             <section class="normal" id="section-">
 <div id="adding-interaction" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Adding interaction<a href="adding-interaction.html#adding-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<pre><code>## Warning: package &#39;kableExtra&#39; was built under R version 4.2.2</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.2.3</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following object is masked from &#39;package:kableExtra&#39;:
@@ -191,6 +193,7 @@ code span.wa { font-style: italic; } /* Warning */
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
+<pre><code>## Warning: package &#39;reactable&#39; was built under R version 4.2.3</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;purrr&#39;</code></pre>
 <pre><code>## The following object is masked from &#39;package:magrittr&#39;:
@@ -199,15 +202,9 @@ code span.wa { font-style: italic; } /* Warning */
 <p>The <code>bookdown</code> format is compatible with many JavaScript-based packages such as <code>shiny</code> and <code>plotly</code>. This means that we can create books where users can interact with graphs, dashboards, and more!</p>
 <p>In this section we focus on <code>reactable</code>, a package that allows users to interactively sort and filter tables, similarly to an Excel workbook.</p>
 <p>[describe reactable and kable]</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="adding-interaction.html#cb9-1" tabindex="-1"></a><span class="fu">kable2</span>(</span>
-<span id="cb9-2"><a href="adding-interaction.html#cb9-2" tabindex="-1"></a>  t1, </span>
-<span id="cb9-3"><a href="adding-interaction.html#cb9-3" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Students with disabilities&quot;</span>,</span>
-<span id="cb9-4"><a href="adding-interaction.html#cb9-4" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="adding-interaction.html#cb9-5" tabindex="-1"></a>  <span class="fu">column_width</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="adding-interaction.html#cb9-6" tabindex="-1"></a>  <span class="fu">column_width</span>(<span class="dv">3</span>, <span class="at">width =</span> medium)</span></code></pre></div>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-4">Table 4.1: </span>Students with disabilities
+<span id="tab:unnamed-chunk-5">Table 4.1: </span>Students with disabilities
 </caption>
 <thead>
 <tr>
@@ -325,8 +322,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/04-interaction.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues04-interaction.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,

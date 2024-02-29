@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Publishing as a website | bookdown for data scientists</title>
+  <title>Chapter 2 Motivation | bookdown for data scientists</title>
   <meta name="description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Publishing as a website | bookdown for data scientists" />
+  <meta property="og:title" content="Chapter 2 Motivation | bookdown for data scientists" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Publishing as a website | bookdown for data scientists" />
+  <meta name="twitter:title" content="Chapter 2 Motivation | bookdown for data scientists" />
   
   <meta name="twitter:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="integrating-regular-data-updates.html"/>
-<link rel="next" href="hosting-on-github.html"/>
+<link rel="prev" href="prerequisites.html"/>
+<link rel="next" href="getting-started.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,26 +178,88 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="publishing-as-a-website" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Publishing as a website<a href="publishing-as-a-website.html#publishing-as-a-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><code>bookdown</code> can publish to PDF and EPUB (e-book, such as Kindle). Add: if you don’t want to deal with GitHub, you can output as PDF with the drawback of not being interactive.</p>
-<p>To host our documentation book on the open web, we can output to gitbook (<code>HTML</code>) so that we can. Notice that we have the benefit of multiple output formats, a good accessibility support.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="publishing-as-a-website.html#cb10-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/build.png&#39;</span>)</span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="../resources/images/build.png" alt="Build to gitbook from Build pane" width="416" />
+<div id="motivation" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Motivation<a href="motivation.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Why is <code>bookdown</code> useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:</p>
+<p>[image of process data project prior to new documentation]</p>
+<p>Into this:</p>
+<!-- [image of new bookdown, GIF for emphasis on interactivity] -->
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="resources/images/pdc-site.png" alt="Published Process Data Release website"  />
 <p class="caption">
-Figure 6.1: Build to gitbook from Build pane
+Figure 2.1: Published Process Data Release website
 </p>
 </div>
-<p>In the RStudio IDE Build pane, click on <em>Build Book &gt; bookdown::gitbook</em>. Or, run <code>bookdown::render_book()</code> in the R console.</p>
+<p>You can imagine <code>bookdown</code> as a format designed to combine the features of data tables, textual explanations, and code.</p>
+<p>The following table summarizes some features of R Markdown and <code>bookdown</code> as compared to familiar alternatives.</p>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="40%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Features</th>
+<th>Microsoft Word/Google Docs</th>
+<th>R Markdown</th>
+<th>bookdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Multiple editors</td>
+<td>Yes</td>
+<td>Yes, via GitHub</td>
+<td>Yes, via GitHub</td>
+</tr>
+<tr class="even">
+<td>Formats and runs code snippets</td>
+<td>No</td>
+<td>Yes, R code</td>
+<td>Yes, R code</td>
+</tr>
+<tr class="odd">
+<td>Formats math</td>
+<td>Yes</td>
+<td>Yes, with LaTeX</td>
+<td>Yes, with LaTeX</td>
+</tr>
+<tr class="even">
+<td>Consistent appearance and formatting</td>
+<td>Haha</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>PDF accessibility</td>
+<td>Yes, via tagged PDF export</td>
+<td>No, requires customization</td>
+<td>No, requires customization</td>
+</tr>
+<tr class="even">
+<td>Web accessibility</td>
+<td>Yes, <a href="https://www.colorado.edu/digital-accessibility/google-docs-and-accessibility">with some exceptions</a></td>
+<td>Yes, via HTML output</td>
+<td>Yes, via HTML output</td>
+</tr>
+</tbody>
+</table>
+<p>As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.</p>
+<div id="when-not-to-use-bookdown" class="section level3 hasAnchor" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> When not to use bookdown<a href="motivation.html#when-not-to-use-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>bookdown</code> is suitable mainly for projects in R. For small datasets with simple documentation, using <code>bookdown</code> may be more complex than the task at hand.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="integrating-regular-data-updates.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hosting-on-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="prerequisites.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -228,8 +290,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/06-publish.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues02-why-bookdown.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,

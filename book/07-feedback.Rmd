@@ -2,4 +2,14 @@
 
 Hosting on GitHub gives us more than just a domain to click on. It gives us the ability to solicit feedback in real time from users. 
 
-[insert where you could direct users to give feedback on GitHub - what happens if they don't have an account?]
+Any reader of your website can click on the GitHub icon from your website to access the source code for your book. (Note: for any proprietary source data used in your bookdown, *do not commit data files to GitHub*. Instead store them locally on your own device.)
+
+```{r,echo=F,fig.cap="Visit source repository by clicking on top-right GitHub icon"}
+knitr::include_graphics('resources/images/visit-repo.png')
+```
+
+Users can now submit an issue via GitHub.
+
+```{r,echo=F,fig.cap="Issues tab in GitHub"}
+knitr::include_graphics('resources/images/issue.png')
+```

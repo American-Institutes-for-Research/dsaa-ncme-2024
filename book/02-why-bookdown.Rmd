@@ -6,7 +6,11 @@ Why is `bookdown` useful for us as data scientists and data-adjacent practitione
 
 Into this:
 
-[image of new bookdown, GIF for emphasis on interactivity]
+<!-- [image of new bookdown, GIF for emphasis on interactivity] -->
+
+```{r,echo=F,fig.cap="Published Process Data Release website"}
+knitr::include_graphics('resources/images/pdc-site.png')
+```
 
 You can imagine `bookdown` as a format designed to combine the features of data tables, textual explanations, and code.
 
@@ -24,3 +28,5 @@ The following table summarizes some features of R Markdown and `bookdown` as com
 As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool  for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.
 
 ### When not to use bookdown
+
+`bookdown` is suitable mainly for projects in R. For small datasets with simple documentation, using `bookdown` may be more complex than the task at hand. 

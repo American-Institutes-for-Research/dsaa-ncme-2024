@@ -1,7 +1,5 @@
 # Appendix: bookdown filetypes
 
-(Skip this section if pressed for time or move to appendix)
-
 Here we take an overview of the main filetypes involved in bookdown and what they are used for.
 
 > Who has worked with `.Rmd`, `.yml`, or `.css` before? What are these filetypes used for?
@@ -12,14 +10,14 @@ bookdown is an extension of the R Markdown format, which is itself an extension 
 
 But you don't need to know Markdown to get started. Toggle the options on the top left of the document window to switch between visual mode, which is similar to a Google Docs or Microsoft Word interface:
 
-```{r,fig.cap="R Markdown in visual mode"}
-knitr::include_graphics('../resources/images/visual-mode.png')
+```{r,echo=F,fig.cap="R Markdown in visual mode"}
+knitr::include_graphics('resources/images/visual-mode.png')
 ```
 
 And source mode:
 
-```{r,fig.cap="R Markdown in source mode"}
-knitr::include_graphics('../resources/images/source-mode.png')
+```{r,echo=F,fig.cap="R Markdown in source mode"}
+knitr::include_graphics('resources/images/source-mode.png')
 ```
 
 See [Resources](#resources) for links to learning R Markdown.
@@ -53,9 +51,16 @@ Cascading Style Sheets (CSS) are used across the web to control aesthetics.
 
 This piece is optional, especially for branded materials that may need to align with organizational guidelines. 
 
-It can also be used to customize your output to handle specific cases. For example, I wanted. Let's see an example of how I dealt with this:
+It can also be used to customize your output to handle specific cases. For example, I wanted to make hyperlinks a darker blue for web accessibility reasons. Let's see an example of how I dealt with this:
 
-
+```css
+a:active, a:hover, a:focus,
+button:active, button:hover, button:focus,
+li a:active, li a:hover, li a:focus, 
+.active a, .page-inner a {
+  color: #3366cc !important;
+}
+```
 
 Another example is increasing the visible page width for wide content such as tables:
 
@@ -77,5 +82,3 @@ Another example is increasing the visible page width for wide content such as ta
   max-width: 98% !important;
 }
 ```
-
-[insert how I referenced these in the book]

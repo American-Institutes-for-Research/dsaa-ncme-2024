@@ -20,6 +20,10 @@ lang: "en"
 description: "This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository."
 ---
 
+```{r setup, echo=F, warning=F}
+knitr::opts_knit$set(root.dir = "../")
+```
+
 # bookdown for data scientists
 
 This tutorial demonstrates how to use `bookdown`, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository.

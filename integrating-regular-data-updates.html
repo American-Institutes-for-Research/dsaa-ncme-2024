@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>bookdown for data scientists</title>
+  <title>Chapter 5 Integrating regular data updates | bookdown for data scientists</title>
   <meta name="description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="bookdown for data scientists" />
+  <meta property="og:title" content="Chapter 5 Integrating regular data updates | bookdown for data scientists" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="bookdown for data scientists" />
+  <meta name="twitter:title" content="Chapter 5 Integrating regular data updates | bookdown for data scientists" />
   
   <meta name="twitter:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="prerequisites.html"/>
+<link rel="prev" href="adding-interaction.html"/>
+<link rel="next" href="publishing-as-a-website.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,22 +178,23 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">bookdown for data scientists</h1>
-</div>
-<div id="bookdown-for-data-scientists" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> bookdown for data scientists<a href="index.html#bookdown-for-data-scientists" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This tutorial demonstrates how to use <code>bookdown</code>, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository.</p>
-<p>Questions for live interaction are included as callouts.</p>
-<p>To do: focus more on what than how</p>
+<div id="integrating-regular-data-updates" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Integrating regular data updates<a href="integrating-regular-data-updates.html#integrating-regular-data-updates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Each update to the underlying data may require us to update text in dozens or hundreds of places regarding sample size, missing values, and more. Integrating code directly into the text allows us to save time and prevent typos by calculating summary statistics from the data itself.</p>
+<p>It is likely we are not allowed to store data in the same place as the documentation, but uploading a summary <code>.csv</code> or <code>.xlsx</code> data file into our working directory allows us to accomplish the same task.</p>
+<p>For example, we write the below as inline R code:</p>
+<p>[insert code snippet of inline R]</p>
+<p>Which renders as:</p>
+<p>[insert image of rendered result]</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="prerequisites.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="adding-interaction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="publishing-as-a-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -224,8 +225,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/index.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues05-updates.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,

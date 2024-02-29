@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Motivation | bookdown for data scientists</title>
+  <title>Chapter 3 Getting started | bookdown for data scientists</title>
   <meta name="description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Motivation | bookdown for data scientists" />
+  <meta property="og:title" content="Chapter 3 Getting started | bookdown for data scientists" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Motivation | bookdown for data scientists" />
+  <meta name="twitter:title" content="Chapter 3 Getting started | bookdown for data scientists" />
   
   <meta name="twitter:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="prerequisites.html"/>
-<link rel="next" href="getting-started.html"/>
+<link rel="prev" href="motivation.html"/>
+<link rel="next" href="adding-interaction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,81 +178,32 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="motivation" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Motivation<a href="motivation.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Why is <code>bookdown</code> useful for us as data scientists and data-adjacent practitioners? Because we can self-publish professional-looking materials that help us to organize things like this:</p>
-<p>[image of process data project prior to new documentation]</p>
-<p>Into this:</p>
-<p>[image of new bookdown, GIF for emphasis on interactivity]</p>
-<p>You can imagine <code>bookdown</code> as a format designed to combine the features of data tables, textual explanations, and code.</p>
-<p>The following table summarizes some features of R Markdown and <code>bookdown</code> as compared to familiar alternatives.</p>
-<table>
-<colgroup>
-<col width="24%" />
-<col width="40%" />
-<col width="17%" />
-<col width="17%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Features</th>
-<th>Microsoft Word/Google Docs</th>
-<th>R Markdown</th>
-<th>bookdown</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Multiple editors</td>
-<td>Yes</td>
-<td>Yes, via GitHub</td>
-<td>Yes, via GitHub</td>
-</tr>
-<tr class="even">
-<td>Formats and runs code snippets</td>
-<td>No</td>
-<td>Yes, R code</td>
-<td>Yes, R code</td>
-</tr>
-<tr class="odd">
-<td>Formats math</td>
-<td>Yes</td>
-<td>Yes, with LaTeX</td>
-<td>Yes, with LaTeX</td>
-</tr>
-<tr class="even">
-<td>Consistent appearance and formatting</td>
-<td>Haha</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>PDF accessibility</td>
-<td>Yes, via tagged PDF export</td>
-<td>No, requires customization</td>
-<td>No, requires customization</td>
-</tr>
-<tr class="even">
-<td>Web accessibility</td>
-<td>Yes, <a href="https://www.colorado.edu/digital-accessibility/google-docs-and-accessibility">with some exceptions</a></td>
-<td>Yes, via HTML output</td>
-<td>Yes, via HTML output</td>
-</tr>
-</tbody>
-</table>
-<p>As stated in the table, I would like to make a note about accessibility: Microsoft Word has a great tool for exporting documents as tagged PDFs, a format that helps users who use screen readers, such as users with visual disabilities. I have found in my personal experience that R Markdown and bookdown require minimal to moderate customization to follow common accessibility practices, such as color contrast and tagging. My company was able to follow 508 requirements.</p>
-<div id="when-not-to-use-bookdown" class="section level3 hasAnchor" number="2.0.1">
-<h3><span class="header-section-number">2.0.1</span> When not to use bookdown<a href="motivation.html#when-not-to-use-bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-
+<div id="getting-started" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Getting started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Open RStudio Desktop.</p>
+<p>Go to <em>File &gt; New Project &gt; New Directory &gt; Book project using bookdown</em></p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="resources/images/file-new-project.png" alt="File menu in RStudio to create a new project"  />
+<p class="caption">
+Figure 3.1: File menu in RStudio to create a new project
+</p>
 </div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="resources/images/bookdown-project.png" alt="Click on Book project using bookdown"  />
+<p class="caption">
+Figure 3.2: Click on Book project using bookdown
+</p>
+</div>
+<p>We now have an example book with all the requisite files. If you want you can simply edit the <code>.Rmd</code> files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="prerequisites.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="motivation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adding-interaction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -283,8 +234,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/02-why-bookdown.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues03-getting-started.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 Prerequisites | bookdown for data scientists</title>
+  <title>6.1 Hosting on GitHub | bookdown for data scientists</title>
   <meta name="description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 Prerequisites | bookdown for data scientists" />
+  <meta property="og:title" content="6.1 Hosting on GitHub | bookdown for data scientists" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 Prerequisites | bookdown for data scientists" />
+  <meta name="twitter:title" content="6.1 Hosting on GitHub | bookdown for data scientists" />
   
   <meta name="twitter:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="motivation.html"/>
+<link rel="prev" href="publishing-as-a-website.html"/>
+<link rel="next" href="crowd-sourced-edits.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,29 +178,34 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="prerequisites" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Prerequisites<a href="prerequisites.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All software used in this tutorial is available for free.</p>
-<div id="software" class="section level3 hasAnchor" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Software<a href="prerequisites.html#software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><a href="https://cran.rstudio.com/">R</a> (3.3.0+)</li>
-<li><a href="https://posit.co/download/rstudio-desktop/">RStudio IDE</a> 9</li>
-<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html">TeX installed in RStudio</a></li>
-</ul>
-<p>To publish online:</p>
-<ul>
-<li>GitHub
-<ul>
-<li><a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">GitHub Desktop</a> is an easy introduction to git without requiring command line</li>
-</ul></li>
-</ul>
+<div id="hosting-on-github" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Hosting on GitHub<a href="hosting-on-github.html#hosting-on-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Add: what is GitHub? brief overview, add link.</p>
+<p>In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website.</p>
+<p>Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="resources/images/github-pages.png" alt="Deploy GitHub Pages from the docs folder"  />
+<p class="caption">
+Figure 6.2: Deploy GitHub Pages from the docs folder
+</p>
 </div>
-<div id="knowledge-and-experience" class="section level3 hasAnchor" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Knowledge and experience<a href="prerequisites.html#knowledge-and-experience" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We assume no experience with YAML or LaTeX. Experience with GitHub, R, and R Markdown are helpful, but not necessary.</p>
+<p>The default name for a bookdown project directory is <code>/book</code>, but we see that GitHub only deploys <code>.html</code> files from inside directories named <code>/docs</code>. So we will rename our directory to <code>/docs</code>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="resources/images/rename.png" alt="Renaming books to docs"  />
+<p class="caption">
+Figure 6.3: Renaming books to docs
+</p>
+</div>
+<p>[describe how to GitHub Pages]</p>
+<p>Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to <code>your-username.github.io/repository-name</code>.</p>
+<p>Clicking on that link shows you your new website:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="resources/images/website.png" alt="HTML rendered website welcome page"  />
+<p class="caption">
+Figure 6.4: HTML rendered website welcome page
+</p>
+</div>
 
-</div>
 </div>
 <!-- </div> -->
             </section>
@@ -208,8 +213,8 @@ code span.wa { font-style: italic; } /* Warning */
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="motivation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="publishing-as-a-website.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="crowd-sourced-edits.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -240,8 +245,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/index.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues06-publish.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,

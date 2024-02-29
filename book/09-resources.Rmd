@@ -10,6 +10,4 @@ Author's note: [Quarto](https://quarto.org/) is becoming more popular, and so fa
 
 ### Operating system differences
 
-iOS, Windows, Linux
-
-[Grant add stuff about common/anticipated issues during live demonstration]
+This reference is developed with Windows in mind. Further content about iOS, Linux welcome.

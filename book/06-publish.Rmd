@@ -4,8 +4,8 @@
 
 To host our documentation book on the open web, we can output to gitbook (`HTML`) so that we can. Notice that we have the benefit of multiple output formats, a good accessibility support.
 
-```{r,fig.cap="Build to gitbook from Build pane"}
-knitr::include_graphics('../resources/images/build.png')
+```{r,echo=F,fig.cap="Build to gitbook from Build pane"}
+knitr::include_graphics('resources/images/build.png')
 ```
 
 In the RStudio IDE Build pane, click on *Build Book > bookdown::gitbook*. Or, run `bookdown::render_book()` in the R console.
@@ -18,22 +18,22 @@ In order to make our new book public, we are going to host it on a website. Conv
 
 Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.
 
-```{r,fig.cap="Deploy GitHub Pages from the docs folder"}
-knitr::include_graphics('../resources/images/github-pages.png')
+```{r,echo=F,fig.cap="Deploy GitHub Pages from the docs folder"}
+knitr::include_graphics('resources/images/github-pages.png')
 ```
 
 The default name for a bookdown project directory is `/book`, but we see that GitHub only deploys `.html` files from inside directories named `/docs`. So we will rename our directory to `/docs`.
 
-```{r,fig.cap="Renaming books to docs"}
-knitr::include_graphics('../resources/images/rename.png')
+```{r,echo=F,fig.cap="Renaming books to docs"}
+knitr::include_graphics('resources/images/rename.png')
 ```
 
-[describe how to setup GitHub Pages]
+[describe how to GitHub Pages]
 
 Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to `your-username.github.io/repository-name`. 
 
 Clicking on that link shows you your new website:
 
-```{r,fig.cap="HTML rendered website welcome page"}
-knitr::include_graphics('../resources/images/website.png')
+```{r,echo=F,fig.cap="HTML rendered website welcome page"}
+knitr::include_graphics('resources/images/website.png')
 ```

@@ -4,12 +4,12 @@ Open RStudio Desktop.
 
 Go to *File \> New Project \> New Directory \> Book project using bookdown*
 
-```{r,fig.cap="File menu in RStudio to create a new project"}
-knitr::include_graphics('../resources/images/file-new-project.png')
+```{r,echo=F,fig.cap="File menu in RStudio to create a new project"}
+knitr::include_graphics('resources/images/file-new-project.png')
 ```
 
-```{r,fig.cap="Click on Book project using bookdown"}
-knitr::include_graphics('../resources/images/bookdown-project.png')
+```{r,echo=F,fig.cap="Click on Book project using bookdown"}
+knitr::include_graphics('resources/images/bookdown-project.png')
 ```
 
 We now have an example book with all the requisite files. If you want you can simply edit the `.Rmd` files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.

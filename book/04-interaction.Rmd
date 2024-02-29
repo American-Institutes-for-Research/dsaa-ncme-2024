@@ -1,10 +1,10 @@
 # Adding interaction
 
-```{r, echo=F, warning=F}
-source('setup.R')
+```{r, echo=F}
+source('book/setup.R')
 
-t1 <- read_table('../resources/data/tables.xlsx',sheet="iep")
-codebook <- read_table('../resources/data/codebook.xlsx',sheet=1)
+t1 <- read_table('resources/data/tables.xlsx',sheet="iep")
+codebook <- read_table('resources/data/codebook.xlsx',sheet=1)
 ```
 
 The `bookdown` format is compatible with many JavaScript-based packages such as `shiny` and `plotly`. This means that we can create books where users can interact with graphs, dashboards, and more!
@@ -13,7 +13,7 @@ In this section we focus on `reactable`, a package that allows users to interact
 
 [describe reactable and kable]
 
-```{r}
+```{r,echo=F}
 kable2(
   t1, 
   caption = "Students with disabilities",

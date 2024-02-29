@@ -10,8 +10,8 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit:
-        link: https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues%s
-        text: "Feedback"
+        link: https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/%s
+        text: "Edit"
     download: ["pdf"]
     sharing:
       github: yes

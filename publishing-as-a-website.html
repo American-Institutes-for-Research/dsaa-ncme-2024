@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Getting started | bookdown for data scientists</title>
+  <title>Chapter 6 Publishing as a website | bookdown for data scientists</title>
   <meta name="description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Getting started | bookdown for data scientists" />
+  <meta property="og:title" content="Chapter 6 Publishing as a website | bookdown for data scientists" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Getting started | bookdown for data scientists" />
+  <meta name="twitter:title" content="Chapter 6 Publishing as a website | bookdown for data scientists" />
   
   <meta name="twitter:description" content="This tutorial demonstrates how to use bookdown, an extension of R Markdown, to quickly create interactive data documentation for large datasets with many components and filetypes. Parts of this tutorial are adapted from the bookdown GitHub repository." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="motivation.html"/>
-<link rel="next" href="adding-interaction.html"/>
+<link rel="prev" href="integrating-regular-data-updates.html"/>
+<link rel="next" href="hosting-on-github.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,34 +178,25 @@ code span.wa { font-style: italic; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-started" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Getting started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Open RStudio Desktop.</p>
-<p>Go to <em>File &gt; New Project &gt; New Directory &gt; Book project using bookdown</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="getting-started.html#cb1-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/file-new-project.png&#39;</span>)</span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="../resources/images/file-new-project.png" alt="File menu in RStudio to create a new project" width="151" />
+<div id="publishing-as-a-website" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Publishing as a website<a href="publishing-as-a-website.html#publishing-as-a-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><code>bookdown</code> can publish to PDF and EPUB (e-book, such as Kindle). Add: if you don’t want to deal with GitHub, you can output as PDF with the drawback of not being interactive.</p>
+<p>To host our documentation book on the open web, we can output to gitbook (<code>HTML</code>) so that we can. Notice that we have the benefit of multiple output formats, a good accessibility support.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="resources/images/build.png" alt="Build to gitbook from Build pane"  />
 <p class="caption">
-Figure 3.1: File menu in RStudio to create a new project
+Figure 6.1: Build to gitbook from Build pane
 </p>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started.html#cb2-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;../resources/images/bookdown-project.png&#39;</span>)</span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="../resources/images/bookdown-project.png" alt="Click on Book project using bookdown" width="267" />
-<p class="caption">
-Figure 3.2: Click on Book project using bookdown
-</p>
-</div>
-<p>We now have an example book with all the requisite files. If you want you can simply edit the <code>.Rmd</code> files the same way you would edit a Word document and have a functioning book ready to go, but for data documentation purposes, we will dive a little deeper.</p>
-
+<p>In the RStudio IDE Build pane, click on <em>Build Book &gt; bookdown::gitbook</em>. Or, run <code>bookdown::render_book()</code> in the R console.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="motivation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="adding-interaction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="integrating-regular-data-updates.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hosting-on-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -236,8 +227,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/edit/main/docs/03-getting-started.Rmd",
-"text": "Edit"
+"link": "https://github.com/American-Institutes-for-Research/dsaa-pdc-ncme/issues06-publish.Rmd",
+"text": "Feedback"
 },
 "history": {
 "link": null,
