@@ -12,9 +12,7 @@ In the RStudio IDE Build pane, click on *Build Book > bookdown::gitbook*. Or, ru
 
 ## Hosting on GitHub
 
-Add: what is GitHub? brief overview, add link.
-
-In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website. 
+In order to make our new book public, we are going to host it on a website. Conveniently, GitHub ([what is GitHub?](https://www.coursera.org/articles/what-is-git)) has a built-in function to make any repository into a website. 
 
 Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.
 
@@ -22,13 +20,11 @@ Open a browser and navigate to your repository online. On the Settings tab, unde
 knitr::include_graphics('resources/images/github-pages.png')
 ```
 
-The default name for a bookdown project directory is `/book`, but we see that GitHub only deploys `.html` files from inside directories named `/docs`. So we will rename our directory to `/docs`.
+The default name for a bookdown project directory is `/book`, but GitHub only deploys `.html` files from inside the main directory of our repository. This repository is set to build `.html` files to the main directory: if you're starting from scratch, you can change this setting by editing `_bookdown.yml`:
 
-```{r,echo=F,fig.cap="Renaming books to docs"}
-knitr::include_graphics('resources/images/rename.png')
+```yaml
+output_dir: "."
 ```
-
-[describe how to GitHub Pages]
 
 Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to `your-username.github.io/repository-name`. 
 

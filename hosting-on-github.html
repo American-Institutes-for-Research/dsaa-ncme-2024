@@ -180,8 +180,7 @@ code span.wa { font-style: italic; } /* Warning */
             <section class="normal" id="section-">
 <div id="hosting-on-github" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Hosting on GitHub<a href="hosting-on-github.html#hosting-on-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Add: what is GitHub? brief overview, add link.</p>
-<p>In order to make our new book public, we are going to host it on a website. Conveniently, GitHub has a built-in function to make any repository into a website.</p>
+<p>In order to make our new book public, we are going to host it on a website. Conveniently, GitHub (<a href="https://www.coursera.org/articles/what-is-git">what is GitHub?</a>) has a built-in function to make any repository into a website.</p>
 <p>Open a browser and navigate to your repository online. On the Settings tab, under Pages, enable GitHub Pages.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="resources/images/github-pages.png" alt="Deploy GitHub Pages from the docs folder"  />
@@ -189,20 +188,14 @@ code span.wa { font-style: italic; } /* Warning */
 Figure 6.2: Deploy GitHub Pages from the docs folder
 </p>
 </div>
-<p>The default name for a bookdown project directory is <code>/book</code>, but we see that GitHub only deploys <code>.html</code> files from inside directories named <code>/docs</code>. So we will rename our directory to <code>/docs</code>.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
-<img src="resources/images/rename.png" alt="Renaming books to docs"  />
-<p class="caption">
-Figure 6.3: Renaming books to docs
-</p>
-</div>
-<p>[describe how to GitHub Pages]</p>
+<p>The default name for a bookdown project directory is <code>/book</code>, but GitHub only deploys <code>.html</code> files from inside the main directory of our repository. This repository is set to build <code>.html</code> files to the main directory: if you’re starting from scratch, you can change this setting by editing <code>_bookdown.yml</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="hosting-on-github.html#cb10-1" tabindex="-1"></a><span class="fu">output_dir</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;.&quot;</span></span></code></pre></div>
 <p>Wait up to 5 minutes for GitHub to publish your website. When you return to the GitHub Pages tab, GitHub should alert you that your website is available at some link similar to <code>your-username.github.io/repository-name</code>.</p>
 <p>Clicking on that link shows you your new website:</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="resources/images/website.png" alt="HTML rendered website welcome page"  />
 <p class="caption">
-Figure 6.4: HTML rendered website welcome page
+Figure 6.3: HTML rendered website welcome page
 </p>
 </div>
 

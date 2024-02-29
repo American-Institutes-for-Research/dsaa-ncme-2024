@@ -183,9 +183,13 @@ code span.wa { font-style: italic; } /* Warning */
 <p>Each update to the underlying data may require us to update text in dozens or hundreds of places regarding sample size, missing values, and more. Integrating code directly into the text allows us to save time and prevent typos by calculating summary statistics from the data itself.</p>
 <p>It is likely we are not allowed to store data in the same place as the documentation, but uploading a summary <code>.csv</code> or <code>.xlsx</code> data file into our working directory allows us to accomplish the same task.</p>
 <p>For example, we write the below as inline R code:</p>
-<p>[insert code snippet of inline R]</p>
+<blockquote>
+<p>There are ` r nrow(codebook) ` rows in the codebook.</p>
+</blockquote>
 <p>Which renders as:</p>
-<p>[insert image of rendered result]</p>
+<blockquote>
+<p>There are 48 rows in the codebook.</p>
+</blockquote>
 
 </div>
             </section>

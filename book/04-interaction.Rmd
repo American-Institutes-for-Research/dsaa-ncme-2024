@@ -1,17 +1,10 @@
 # Adding interaction
 
-```{r, echo=F}
-source('book/setup.R')
-
-t1 <- read_table('resources/data/tables.xlsx',sheet="iep")
-codebook <- read_table('resources/data/codebook.xlsx',sheet=1)
-```
-
 The `bookdown` format is compatible with many JavaScript-based packages such as `shiny` and `plotly`. This means that we can create books where users can interact with graphs, dashboards, and more!
 
 In this section we focus on `reactable`, a package that allows users to interactively sort and filter tables, similarly to an Excel workbook. 
 
-[describe reactable and kable]
+`kable` is the default package used to render tables in `bookdown`. Here is an example we might use in dataset documentation:
 
 ```{r,echo=F}
 kable2(
@@ -21,6 +14,8 @@ kable2(
   column_width(c(1,4)) %>%
   column_width(3, width = medium)
 ```
+
+`reactable` is a package in R that uses JavaScript to allow us Excel-like interactivity in codebook documentation. We get the best of both worlds: this is integrated directly into the text, allowing additional notation, and we can also filter, sort, and search long documentation for the variables we are interested in. Here is a working example:
 
 ```{r, echo=FALSE, warning=FALSE}
 reactable2(codebook,

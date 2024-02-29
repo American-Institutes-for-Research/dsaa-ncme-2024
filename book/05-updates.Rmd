@@ -6,8 +6,8 @@ It is likely we are not allowed to store data in the same place as the documenta
 
 For example, we write the below as inline R code:
 
-[insert code snippet of inline R]
+> There are \` r nrow(codebook) \` rows in the codebook.
 
 Which renders as:
 
-[insert image of rendered result]
+> There are `r nrow(codebook)` rows in the codebook.

@@ -51,3 +51,9 @@ To publish online:
 
 We assume no experience with YAML or LaTeX. Experience with GitHub, R, and R Markdown are helpful, but not necessary.
 
+```{r, echo=F}
+source('book/setup.R')
+
+t1 <- read_table('resources/data/tables.xlsx',sheet="iep")
+codebook <- read_table('resources/data/codebook.xlsx',sheet=1)
+```
