@@ -6,7 +6,7 @@ This is a demonstration of the R Bookdown workflow by Yihui Xie for the NCME 202
 |  |  |
 |---|---|
 | DSAA Team Lead | Karen Yi (AIR Data Scientist Assistant) |
-| Project Tier | 1 |
+| Project Tier | 2 |
 | DSAA Team Members |  |
 | Client(s) | NCME |
 | Internal Client(s) |  |
